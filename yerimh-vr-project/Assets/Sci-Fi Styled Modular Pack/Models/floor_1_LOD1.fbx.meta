@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: c36834fa2d8d0504e9842a6454f207ca
 ModelImporter:
-  serializedVersion: 25
+  serializedVersion: 26
   internalIDToNameTable:
   - first:
       1: 100000
@@ -33,7 +33,7 @@ ModelImporter:
       name: lattice
     second: {fileID: 2100000, guid: 0f4853191d321d748b1f95a97d7b37f4, type: 2}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 2
     materialLocation: 0
@@ -66,6 +66,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
