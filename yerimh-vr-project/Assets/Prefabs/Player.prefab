@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 6631462933308245584}
   - component: {fileID: 8851701381813080695}
   - component: {fileID: 6606601619825466496}
+  - component: {fileID: -983724347980020671}
+  - component: {fileID: 4881871115846124342}
+  - component: {fileID: 1305639125866728669}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -125,3 +128,56 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-983724347980020671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8497107830450558672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 043fbfd0ae7027742bace7a3691feb13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localAvatarPrefab: {fileID: 0}
+  remoteAvatarPrefab: {fileID: 0}
+  helpPanel: {fileID: 0}
+  riftMaterial: {fileID: 0}
+  gearMaterial: {fileID: 0}
+  roomSphere: {fileID: 0}
+  roomFloor: {fileID: 0}
+  spyCamera: {fileID: 0}
+--- !u!114 &4881871115846124342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8497107830450558672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c56da5121059474dbd896446bbc4ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  rigid: {fileID: 0}
+--- !u!114 &1305639125866728669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8497107830450558672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68ec2fe99d1108b9d0006a298d76c639, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 0
+  sensitivityX: 15
+  sensitivityY: 15
+  minimumX: -360
+  maximumX: 360
+  minimumY: -60
+  maximumY: 60
