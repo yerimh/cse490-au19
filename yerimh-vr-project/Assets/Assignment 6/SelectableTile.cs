@@ -15,7 +15,9 @@ public class SelectableTile : Selectable
 {
     [SerializeField]
     private Material def, hover, selected;
-    private bool isSelected;
+
+    [SerializeField]
+    public bool isSelected;
 
     public override GameObject OnSelect()
     {
@@ -38,5 +40,6 @@ public class SelectableTile : Selectable
     {
         gameObject.GetComponent<MeshRenderer>().material = def;
         isSelected = false;
+        Debug.Log("Deselected Tile");
     }
 }

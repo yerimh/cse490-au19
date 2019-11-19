@@ -49,7 +49,7 @@ public class PointerSelector : MonoBehaviour
             else
             {
                 // Deselect old hover 
-                if (hover != null && hover != temp && temp == selected)
+                if (temp == selected && hover != null && hover != temp)
                     hover.GetComponent<Selectable>().OnDeselect();
                 // Set hover behavior
                 else

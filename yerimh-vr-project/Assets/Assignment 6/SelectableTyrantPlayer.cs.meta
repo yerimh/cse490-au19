@@ -3,7 +3,12 @@ guid: 1ca2553e6d5b762468711f22558fbb91
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
+  - hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
+  - selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  - anim: {fileID: -6057140222963153312, guid: 7f32f133769308844a4adb27ecce5ccc, type: 3}
+  - sound: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

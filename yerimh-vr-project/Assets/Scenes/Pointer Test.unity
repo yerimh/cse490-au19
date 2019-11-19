@@ -94,10 +94,10 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &67508238
 AudioListener:
   m_ObjectHideFlags: 0
@@ -344,6 +344,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &267494631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -382,6 +383,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -451,6 +453,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &287758479
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -489,6 +492,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -539,7 +543,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: cc07fdef0be27e946a3ea001588a14bf, type: 2}
     - target: {fileID: -4216859302048453862, guid: 7f32f133769308844a4adb27ecce5ccc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -700,7 +704,8 @@ MonoBehaviour:
   extraHiddenLayers:
     serializedVersion: 2
     m_Bits: 0
-  externalCompositionBackdropColor: {r: 0, g: 0, b: 0, a: 0}
+  externalCompositionBackdropColorRift: {r: 0, g: 1, b: 0, a: 1}
+  externalCompositionBackdropColorQuest: {r: 0, g: 0, b: 0, a: 0}
   capturingCameraDevice: 0
   flipCameraFrameHorizontally: 0
   flipCameraFrameVertically: 0
@@ -764,6 +769,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &475934669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -802,6 +808,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -885,6 +892,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
 --- !u!222 &804683694
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -906,7 +935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1009,6 +1038,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1151773610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1047,6 +1077,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1111,6 +1142,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
 --- !u!114 &1242629981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,6 +1161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!4 &1242629982
 Transform:
   m_ObjectHideFlags: 0
@@ -1172,6 +1213,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1270154115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1210,6 +1252,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1279,6 +1322,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1382989342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1317,6 +1361,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1386,6 +1431,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1407564314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1424,6 +1470,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1493,6 +1540,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1429694700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1531,6 +1579,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1600,6 +1649,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1500743656
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1638,6 +1688,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1707,6 +1758,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1553318933
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1745,6 +1797,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1837,6 +1890,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1902,6 +1956,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &1695668323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1914,6 +1973,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
 --- !u!223 &1695668324
 Canvas:
   m_ObjectHideFlags: 0
@@ -1990,6 +2059,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1710419448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2028,6 +2098,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2061,6 +2132,118 @@ Transform:
   m_Children: []
   m_Father: {fileID: 378416002}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1903570624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1903570629}
+  - component: {fileID: 1903570628}
+  - component: {fileID: 1903570627}
+  - component: {fileID: 1903570626}
+  - component: {fileID: 1903570625}
+  m_Layer: 10
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1903570625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903570624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca2553e6d5b762468711f22558fbb91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  def: {fileID: 2100000, guid: e574a418b8d502045a08732280734d3c, type: 2}
+  hover: {fileID: 2100000, guid: 290a04fdc1747ea468bc74240d0741e5, type: 2}
+  selected: {fileID: 2100000, guid: ee9336e8ea07af243830c6e513ed6dc5, type: 2}
+  isSelected: 0
+  anim: {fileID: 0}
+  poseNum: 0
+  sound: {fileID: 0}
+--- !u!65 &1903570626
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903570624}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1903570627
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903570624}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1903570628
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903570624}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1903570629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903570624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.19, y: 2.26, z: 2.6501377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1928740980
 GameObject:
@@ -2097,6 +2280,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1928740982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2135,6 +2319,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2204,6 +2389,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1931865856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2242,6 +2428,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2311,6 +2498,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &1961637697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2349,6 +2537,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2418,6 +2607,7 @@ MonoBehaviour:
   def: {fileID: 2100000, guid: 581dec1e5a2c1074aa9adc43b9d1fc22, type: 2}
   hover: {fileID: 2100000, guid: c4f83b5eaccab194a8b0fd6aff273670, type: 2}
   selected: {fileID: 2100000, guid: 24bf9f328d901d64bb6ae081cb1fc3bd, type: 2}
+  isSelected: 0
 --- !u!65 &2022377074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2456,6 +2646,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2557,12 +2748,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7180198080763112275, guid: 0922759e4e6ce4a48908f7edc06289d8,
+    - target: {fileID: 7180198079893496575, guid: 0922759e4e6ce4a48908f7edc06289d8,
         type: 3}
       propertyPath: anim
       value: 
       objectReference: {fileID: 337725153}
-    - target: {fileID: 7180198079893496575, guid: 0922759e4e6ce4a48908f7edc06289d8,
+    - target: {fileID: 7180198080763112275, guid: 0922759e4e6ce4a48908f7edc06289d8,
         type: 3}
       propertyPath: anim
       value: 
